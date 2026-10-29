@@ -403,7 +403,7 @@ button.button:hover {
 
 .proof {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -416,9 +416,7 @@ button.button:hover {
   border-bottom: 1px solid var(--line);
 }
 
-.proof li:nth-child(odd) { border-right: 1px solid var(--line); }
-
-.proof li:nth-last-child(-n + 2) { border-bottom: 0; }
+.proof li:last-child { border-bottom: 0; }
 
 .proof strong {
   display: block;
@@ -442,8 +440,8 @@ button.button:hover {
   color: var(--muted);
 }
 
-@media (min-width: 880px) {
-  .proof { grid-template-columns: repeat(4, 1fr); }
+@media (min-width: 700px) {
+  .proof { grid-template-columns: repeat(3, 1fr); }
   .proof li {
     border-bottom: 0;
     border-right: 1px solid var(--line);
