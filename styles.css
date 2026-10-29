@@ -145,6 +145,7 @@ textarea:focus-visible {
 }
 
 .nav-inner {
+  position: relative;
   width: min(72rem, calc(100% - 2.5rem));
   margin-inline: auto;
   min-height: var(--header);
@@ -241,14 +242,31 @@ textarea:focus-visible {
 }
 
 @media (min-width: 960px) {
-  .nav-details { display: flex; align-items: center; }
-  .nav-toggle { display: none; }
+  .nav-details {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: auto;
+    min-width: max-content;
+  }
+  .nav-toggle {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
   .nav-details > .nav-links {
     display: flex !important;
     flex-direction: row;
     align-items: center;
-    gap: 1.25rem;
-    position: static;
+    gap: 1.15rem;
+    width: max-content;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
     background: transparent;
     border: 0;
     padding: 0;
@@ -257,9 +275,11 @@ textarea:focus-visible {
   .nav-links a {
     font-size: 0.72rem;
     font-weight: 600;
-    letter-spacing: 0.14em;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
     min-height: 44px;
+    white-space: nowrap;
+    flex: none;
   }
 
   .nav-links a:hover { color: var(--burgundy); }
@@ -666,7 +686,7 @@ blockquote.pull footer {
 
 @media (min-width: 900px) {
   .quotes {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 2.5rem;
     align-items: start;
   }
@@ -1066,6 +1086,117 @@ form .button { margin-top: 1.6rem; width: 100%; }
 .site-footer a:visited { color: var(--ink); text-underline-offset: 0.18em; }
 
 .site-footer a:hover { color: var(--burgundy); }
+
+.section-ink {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.section-ink h2,
+.section-ink h3 { color: var(--paper); }
+
+.section-ink .lede,
+.section-ink p { color: rgba(243, 238, 230, 0.82); }
+
+.section-ink .kicker { color: #C4B8A8; }
+
+.detail-grid {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.detail-grid h3 {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.7rem;
+  margin-bottom: 0.35rem;
+}
+
+.detail-grid p { margin: 0; }
+
+.law { padding: 1.35rem 0; border-top: 1px solid rgba(243, 238, 230, 0.22); }
+
+.law .num {
+  font-family: var(--serif);
+  font-style: italic;
+  color: #C4B8A8;
+}
+
+.law .receipt {
+  margin-top: 0.85rem;
+  color: #C4B8A8;
+}
+
+.locked {
+  margin-top: 0.5rem;
+  padding: 1.5rem 0 0.25rem;
+  border-top: 1px dashed rgba(243, 238, 230, 0.35);
+}
+
+.sys-list { list-style: none; margin: 2rem 0 0; padding: 0; }
+
+.sys-list li {
+  display: grid;
+  grid-template-columns: 3.2rem 1fr;
+  gap: 0.75rem 1rem;
+  align-items: baseline;
+  padding: 1rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.sys-list .num {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.7rem;
+  color: var(--burgundy);
+}
+
+.sys-list h3 { margin: 0; }
+
+.chip-note {
+  display: block;
+  margin-top: 0.2rem;
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.vault-grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 2rem 0 0;
+  padding: 0;
+  border-top: 1px solid var(--line);
+}
+
+.vault-grid li {
+  padding: 1.05rem 0.2rem;
+  border-bottom: 1px solid var(--line);
+  font-family: var(--serif);
+  font-size: 1.45rem;
+}
+
+.photo-room img { object-position: center 62%; }
+
+.photo-talk img { object-position: center 42%; }
+
+@media (min-width: 700px) {
+  .detail-grid { grid-template-columns: 1fr 1fr; gap: 1.75rem 2.75rem; }
+  .vault-grid { grid-template-columns: 1fr 1fr; }
+  .vault-grid li { padding-right: 1.5rem; }
+}
+
+@media (min-width: 960px) {
+  .vault-grid { grid-template-columns: 1fr 1fr 1fr; }
+  .sys-list li { grid-template-columns: 4rem 1fr auto; }
+  .chip-note { margin-top: 0; }
+}
 
 @media (max-width: 560px) {
   .timeline li { grid-template-columns: 1fr; gap: 0.2rem; }
