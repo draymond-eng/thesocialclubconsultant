@@ -510,9 +510,10 @@ button.button:hover {
 
 .sticky-photo img {
   width: 100%;
-  aspect-ratio: 3 / 4;
+  height: auto;
+  aspect-ratio: 4 / 5;
   object-fit: cover;
-  object-position: center 58%;
+  object-position: center 62%;
 }
 
 @media (min-width: 960px) {
@@ -537,21 +538,29 @@ button.button:hover {
   }
 
   .split-about {
-    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    grid-template-columns: minmax(0, 1fr) 22.5rem;
     gap: 4rem;
     align-items: start;
   }
 
-  .about-photo img { aspect-ratio: 3 / 4; object-position: center 22%; }
+  .about-photo {
+    width: 22.5rem;
+    max-width: 100%;
+    justify-self: end;
+    align-self: start;
+  }
+
+  .about-photo img { object-position: center 18%; }
 }
 
 .about-photo { margin: 0.5rem 0 0; }
 
 .about-photo img {
   width: 100%;
+  height: auto;
   aspect-ratio: 4 / 5;
   object-fit: cover;
-  object-position: center 24%;
+  object-position: center 18%;
 }
 
 .about-copy p + p { margin-top: 1rem; }
@@ -756,6 +765,26 @@ blockquote.pull footer {
   padding-top: 2.5rem;
   border-top: 1px solid var(--line);
 }
+
+.talks {
+  list-style: none;
+  margin: 1.5rem 0 0;
+  padding: 0;
+}
+
+.talks li {
+  display: block;
+  padding: 1.05rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.talks strong {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.talks span { display: block; }
 
 .offer .offer-lead,
 .also .offer-lead {
