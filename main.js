@@ -1,15 +1,20 @@
 (function () {
   var details = document.querySelector(".nav-details");
+  var desktopNav = window.matchMedia("(min-width: 960px)");
+  function syncNav() {
+    if (!details) return;
+    if (desktopNav.matches) details.setAttribute("open", "");
+  }
   if (details) {
+    syncNav();
+    desktopNav.addEventListener("change", syncNav);
     details.querySelectorAll("a").forEach(function (link) {
       link.addEventListener("click", function () {
-        if (window.matchMedia("(max-width: 959px)").matches) {
-          details.removeAttribute("open");
-        }
+        if (!desktopNav.matches) details.removeAttribute("open");
       });
     });
     document.addEventListener("keydown", function (event) {
-      if (event.key === "Escape") details.removeAttribute("open");
+      if (event.key === "Escape" && !desktopNav.matches) details.removeAttribute("open");
     });
   }
 
