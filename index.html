@@ -190,8 +190,38 @@ if (new URLSearchParams(location.search).get("asked") === "1") {
   <section class="section" id="offers" aria-labelledby="offers-title">
     <div class="wrap">
       <p class="kicker">Offers</p>
-      <h2 id="offers-title">Two ways to work together.</h2>
-      <p class="lede">Launch Sprint is for the months before a club opens. Operating Partner is for the operator who wants a founder in the numbers after it does.</p>
+      <h2 id="offers-title">Work together.</h2>
+      <p class="lede">The Operators Circle is the founding table. A Blueprint Call is the entry point.</p>
+
+      <article class="offer-featured">
+        <p class="kicker">Featured</p>
+        <h3>Operators Circle</h3>
+        <p class="price">$149/mo</p>
+        <p class="offer-lead">Founding rate. Capped at 50 members.</p>
+        <ul>
+          <li>A membership for people who run membership communities</li>
+          <li>One monthly table and one private channel</li>
+          <li>Founding members keep this rate for as long as they stay</li>
+        </ul>
+        <p><a class="button" href="apply.html">Apply for a founding seat<span class="sr-only"> in the Operators Circle</span></a></p>
+      </article>
+
+      <div class="offer-grid">
+        <article class="offer">
+          <p class="kicker">The entry point</p>
+          <h3>Blueprint Call</h3>
+          <p class="price">$350 for 90 minutes</p>
+          <p class="offer-lead">A full look at your concept, your space plan, and your numbers. Pricing, and how people join, covered on the call. A written 30-day plan within 48 hours, plus the expansion gate and napkin test worksheets.</p>
+          <p class="guarantee">If you do not leave with a clear next 30 days, the call is free.</p>
+          <p><a class="text-link" href="https://buy.stripe.com/8x200j6pWc1J3TffLW8Zq0M">Book the call<span class="sr-only">, Blueprint Call, $350</span></a></p>
+        </article>
+        <article class="offer">
+          <h3>Founder Day</h3>
+          <p class="price">$1,800 for one day in Chicago</p>
+          <p class="offer-lead">Tour the room as a prospect would, and see programming and member operations from the inside. The afternoon is a working session on your plan. A follow-up call within 30 days of going home.</p>
+          <p><a class="text-link" href="https://buy.stripe.com/00wbJ13dK0j1ahDarC8Zq0N">Book the day<span class="sr-only">, Founder Day, $1,800</span></a></p>
+        </article>
+      </div>
 
       <div class="offer-grid">
         <article class="offer">
@@ -219,24 +249,18 @@ if (new URLSearchParams(location.search).get("asked") === "1") {
         </article>
       </div>
 
-      <div class="also">
-        <p class="kicker">Also available</p>
-        <div class="also-grid">
-          <article>
-            <h3>Blueprint Call</h3>
-            <p class="price">$350 for 90 minutes</p>
-            <p class="offer-lead">A full look at your concept, your space plan, and your numbers. Pricing, and how people join, covered on the call. A written 30-day plan within 48 hours, plus the expansion gate and napkin test worksheets.</p>
-            <p class="guarantee">If you do not leave with a clear next 30 days, the call is free.</p>
-            <p><a class="text-link" href="https://buy.stripe.com/8x200j6pWc1J3TffLW8Zq0M">Book the call<span class="sr-only">, Blueprint Call</span></a></p>
-          </article>
-          <article>
-            <h3>Founder Day</h3>
-            <p class="price">$1,800 for one day in Chicago</p>
-            <p class="offer-lead">Tour the room as a prospect would, and see programming and member operations from the inside. The afternoon is a working session on your plan. A follow-up call within 30 days of going home.</p>
-            <p><a class="text-link" href="https://buy.stripe.com/00wbJ13dK0j1ahDarC8Zq0N">Book the day<span class="sr-only">, Founder Day</span></a></p>
-          </article>
-        </div>
-      </div>
+      <article class="offer-speaking">
+        <p class="kicker">Speaking</p>
+        <h3>Put the story on your stage.</h3>
+        <p class="offer-lead">Keynotes, panels, and working sessions for conferences, companies, universities, and hospitality groups.</p>
+        <ul>
+          <li>The Loneliness Business. Why belonging is the next great local industry, and what it takes to build it. For conferences and brand teams.</li>
+          <li>Charge to Show Up. The economics of community, and why a free offer changes who returns. For operators and marketers.</li>
+          <li>The founding story. For founders, students, and anyone building from zero.</li>
+          <li>Custom workshops. A working session on your team's actual community problem.</li>
+        </ul>
+        <p><a class="text-link" href="mailto:draymond@threecitiessocial.com?subject=Speaking%20Inquiry">Book Draymond to speak</a></p>
+      </article>
     </div>
   </section>
 
@@ -332,12 +356,7 @@ if (new URLSearchParams(location.search).get("asked") === "1") {
       <div class="prose">
         <p class="kicker">Apply and contact</p>
         <h2 id="contact-title">Tell me what you are building.</h2>
-        <p class="lede">Launch Sprint and Operating Partner start with a note. Tell me what you are building, and the decision in front of you.</p>
-        <div class="circle-note">
-          <h3>The Operators Circle</h3>
-          <p>A membership for people who run membership communities. One monthly table. One private channel. Capped at 50 operators. Founding members pay $149 a month, and they keep that rate for as long as they stay.</p>
-          <p><a href="apply.html">Apply for a founding seat</a></p>
-        </div>
+        <p class="lede">Launch Sprint, Operating Partner, and speaking start with a note. Tell me what you are building, and the decision in front of you.</p>
         <div class="sig">
           <img src="headshot.jpg" width="1000" height="1499" alt="Portrait of Draymond Washington" loading="lazy" decoding="async">
           <p>Draymond Washington<br>Chicago<br><a href="mailto:draymond@threecitiessocial.com">draymond@threecitiessocial.com</a></p>
@@ -354,11 +373,12 @@ if (new URLSearchParams(location.search).get("asked") === "1") {
           <label for="regarding">Regarding</label>
           <select id="regarding" name="Regarding">
             <option value="">Choose one</option>
-            <option>Launch Sprint</option>
-            <option>Operating Partner</option>
+            <option>Operators Circle</option>
             <option>Blueprint Call</option>
             <option>Founder Day</option>
-            <option>Operators Circle</option>
+            <option>Launch Sprint</option>
+            <option>Operating Partner</option>
+            <option>Speaking</option>
             <option>Something else</option>
           </select>
 

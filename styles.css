@@ -679,12 +679,65 @@ blockquote.pull footer {
 }
 
 .offer h3,
-.also h3 {
+.also h3,
+.offer-speaking h3 {
   font-size: clamp(2.1rem, 4vw, 3rem);
   font-style: italic;
 }
 
-.offer .button { margin-top: 1.35rem; }
+.offer .button,
+.offer-featured .button,
+.offer-speaking .button { margin-top: 1.35rem; }
+
+.offer-featured {
+  margin-top: 2.4rem;
+  padding: 2.25rem 1.5rem 2.4rem;
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.offer-featured .kicker { color: #C4B8A8; }
+
+.offer-featured h3 {
+  color: var(--paper);
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(2.8rem, 6vw, 4.4rem);
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+}
+
+.offer-featured .price {
+  color: var(--paper);
+  font-size: clamp(2.2rem, 4vw, 3rem);
+}
+
+.offer-featured .offer-lead,
+.offer-featured li { color: rgba(243, 238, 230, 0.86); }
+
+.offer-featured li { border-top-color: rgba(243, 238, 230, 0.22); }
+
+.offer-featured .button {
+  background: var(--paper);
+  color: var(--ink);
+  border-color: var(--paper);
+}
+
+.offer-featured .button:hover,
+.offer-featured .button:visited:hover {
+  background: var(--burgundy);
+  border-color: var(--burgundy);
+  color: var(--paper);
+}
+
+.offer-featured .button:visited { color: var(--ink); }
+
+.offer-speaking {
+  margin-top: 3rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--line);
+}
 
 .offer .offer-lead,
 .also .offer-lead {
@@ -693,14 +746,18 @@ blockquote.pull footer {
 }
 
 .offer ul,
-.also ul {
+.also ul,
+.offer-featured ul,
+.offer-speaking ul {
   list-style: none;
   margin: 1.25rem 0 0;
   padding: 0;
 }
 
 .offer li,
-.also li {
+.also li,
+.offer-featured li,
+.offer-speaking li {
   padding: 0.72rem 0;
   border-top: 1px solid var(--line);
 }
@@ -712,6 +769,8 @@ blockquote.pull footer {
   font-weight: 500;
   font-size: 1.65rem;
   letter-spacing: 0;
+  font-variant-numeric: lining-nums;
+  font-feature-settings: "lnum" 1;
 }
 
 .also {
