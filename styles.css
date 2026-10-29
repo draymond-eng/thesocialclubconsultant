@@ -605,6 +605,26 @@ blockquote.pull footer {
   color: var(--muted);
 }
 
+.close-note { padding-top: 0; }
+
+.close-note .wrap {
+  border-top: 1px solid var(--line);
+  padding-top: 2.75rem;
+}
+
+.close-note-inner { max-width: 40rem; }
+
+.close-note h2 {
+  font-style: italic;
+  max-width: 12em;
+}
+
+.close-note p {
+  margin-top: 1.15rem;
+  font-size: 1.125rem;
+  line-height: 1.65;
+}
+
 .subhead {
   margin: 3.5rem 0 0.8rem;
   font-size: clamp(2rem, 4vw, 2.8rem);
