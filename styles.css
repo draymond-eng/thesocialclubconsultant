@@ -628,6 +628,10 @@ blockquote.pull footer {
   color: var(--muted);
 }
 
+.timeline-wrap { margin-top: 3.5rem; }
+.timeline-wrap h3 { margin: 0; }
+.timeline li p { margin: 0; }
+
 .close-note { padding-top: 0; }
 
 .close-note .wrap {
@@ -1199,7 +1203,10 @@ form .button { margin-top: 1.6rem; width: 100%; }
 }
 
 @media (max-width: 560px) {
-  .timeline li { grid-template-columns: 1fr; gap: 0.2rem; }
+  .timeline-wrap { margin-top: 2.5rem; }
+  .timeline { margin-top: 1.25rem; }
+  .timeline li { grid-template-columns: 1fr; gap: 0.25rem; padding: 0.85rem 0; }
+  .timeline li p { margin: 0; }
   .brand-role { letter-spacing: 0.1em; }
 }
 
