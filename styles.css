@@ -743,6 +743,14 @@ blockquote.pull footer {
 
 .offer-featured .kicker { color: #C4B8A8; }
 
+.offer-featured .guarantee { color: rgba(243, 238, 230, 0.86); }
+
+.offer-solo {
+  margin-top: 3rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--line);
+}
+
 .offer-featured h3 {
   color: var(--paper);
   font-family: var(--serif);
