@@ -4,23 +4,23 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- PLACEHOLDER: draft v1, final copy expected about Nov 18. -->
-<title>Client intake | The Social Club Consultant</title>
-<meta name="description" content="A short intake before a working session with Draymond Washington.">
+<title>Before we talk</title>
+<meta name="description" content="Short answers are fine. I read everything before the call.">
 <meta name="robots" content="noindex">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:url" content="https://thesocialclubconsultant.com/intake.html">
 <meta property="og:site_name" content="The Social Club Consultant">
-<meta property="og:title" content="Client intake | The Social Club Consultant">
-<meta property="og:description" content="A short intake before a working session with Draymond Washington.">
+<meta property="og:title" content="Before we talk">
+<meta property="og:description" content="Short answers are fine. I read everything before the call.">
 <meta property="og:image" content="https://thesocialclubconsultant.com/share-card.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="627">
 <meta property="og:image:alt" content="Draymond Washington smiling, seated in front of a red paneled wall, with the title The Social Club Consultant.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Client intake | The Social Club Consultant">
-<meta name="twitter:description" content="A short intake before a working session with Draymond Washington.">
+<meta name="twitter:title" content="Before we talk">
+<meta name="twitter:description" content="Short answers are fine. I read everything before the call.">
 <meta name="twitter:image" content="https://thesocialclubconsultant.com/share-card.png">
 <meta name="twitter:image:alt" content="Draymond Washington smiling, seated in front of a red paneled wall, with the title The Social Club Consultant.">
 <meta name="theme-color" content="#F3EEE6">
@@ -51,7 +51,7 @@ if (new URLSearchParams(location.search).get("sent") === "1") {
       <nav class="nav-links" id="site-nav" aria-label="Primary">
         <a href="/#for">Who it is for</a>
         <a href="/#offers">Offers</a>
-        <a href="/#about">About</a>
+        <a href="/#story">Story</a>
         <a href="/apply.html">Apply</a>
         <a href="/#contact">Contact</a>
       </nav>
@@ -68,61 +68,94 @@ if (new URLSearchParams(location.search).get("sent") === "1") {
     <div class="intro-only page-intro">
       <p class="kicker">Client intake</p>
       <h1>Before we talk.</h1>
-      <p class="lede">This takes two minutes and saves us time on the call. Give me real numbers, not polished answers. Messy is fine.</p>
+      <p class="lede">Short answers are fine. I read everything before the call.</p>
     </div>
 
-    <form class="form-block stack-form" action="https://formsubmit.co/draymond@threecitiessocial.com" method="POST">
-      <input type="hidden" name="_subject" value="Client intake, The Social Club Consultant">
+    <form id="intake-form" class="form-block stack-form" action="https://formsubmit.co/draymond@threecitiessocial.com" method="POST">
+      <input type="hidden" id="intake-subject" name="_subject" value="Intake: new submission">
       <input type="hidden" name="_template" value="table">
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_next" value="https://thesocialclubconsultant.com/intake.html?sent=1">
       <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
 
-      <label for="name">Your name</label>
+      <h2 class="form-section">You and the concept</h2>
+
+      <label for="name">Name</label>
       <input id="name" type="text" name="Name" autocomplete="name" required>
 
-      <label for="email">Email <span class="hint">The one you used at checkout, so I can match you up.</span></label>
+      <label for="email">Email</label>
       <input id="email" type="email" name="Email" autocomplete="email" required>
 
-      <label for="booked">What did you book?</label>
-      <select id="booked" name="Booked" required>
-        <option value="" disabled selected>Choose one</option>
-        <option>Blueprint Call ($350)</option>
-        <option>Founder Day ($1,800)</option>
-        <option>Launch Sprint</option>
-        <option>Operating Partner</option>
-      </select>
-
-      <label for="business">Business or project name <span class="hint">A working name is fine.</span></label>
-      <input id="business" type="text" name="Business name">
-
-      <label for="link">Website, Instagram, or event page <span class="hint">Whatever shows your project best. Nothing yet is fine.</span></label>
-      <input id="link" type="text" name="Link" autocomplete="url">
-
-      <label for="city">City and neighborhood</label>
+      <label for="city">City</label>
       <input id="city" type="text" name="City" autocomplete="address-level2" required>
 
-      <label for="building">What are you building? <span class="hint">Describe it the way you would describe it to a friend.</span></label>
-      <textarea id="building" name="What they're building" required></textarea>
+      <label for="building">What are you building?</label>
+      <textarea id="building" name="What are you building?" required></textarea>
 
-      <label for="numbers">Where are you at? <span class="hint">Members, turnout, revenue, rent quotes. Whatever numbers you have. Rough is fine.</span></label>
-      <textarea id="numbers" name="Current numbers" required></textarea>
+      <label for="stage">Where are you right now?</label>
+      <select id="stage" name="Where are you right now?">
+        <option value="" disabled selected>Choose one</option>
+        <option>Idea</option>
+        <option>Running events, no space</option>
+        <option>Have a space</option>
+        <option>Operating, want to grow</option>
+      </select>
 
-      <label for="stuck">The decision you are stuck on right now <span class="hint">This is where we will spend most of our time.</span></label>
-      <textarea id="stuck" name="Stuck on" required></textarea>
+      <label for="howlong">How long have you been at it?</label>
+      <input id="howlong" type="text" name="How long have you been at it?">
 
-      <label for="else">Anything else I should know before we talk? <span class="hint">Optional.</span></label>
+      <label for="link">Website, Instagram, or event page link</label>
+      <input id="link" type="text" name="Link" autocomplete="url">
+
+      <h2 class="form-section">The numbers</h2>
+
+      <label for="members">Members or regulars today? Paying or free?</label>
+      <input id="members" type="text" name="Members or regulars today? Paying or free?">
+
+      <label for="events">Events per month and average attendance</label>
+      <input id="events" type="text" name="Events per month and average attendance">
+
+      <label for="charge">What do you charge today, if anything?</label>
+      <input id="charge" type="text" name="What do you charge today, if anything?">
+
+      <label for="revenue">Monthly revenue, roughly</label>
+      <input id="revenue" type="text" name="Monthly revenue, roughly">
+
+      <label for="invest">What are you willing to invest in the next 12 months? Time, money, or both.</label>
+      <input id="invest" type="text" name="What are you willing to invest in the next 12 months?">
+
+      <h2 class="form-section">What you need</h2>
+
+      <label for="problem">The one problem you’d pay to have solved in the next 30 days</label>
+      <textarea id="problem" name="The one problem you'd pay to have solved in the next 30 days" required></textarea>
+
+      <label for="fear">Biggest fear about the next step</label>
+      <textarea id="fear" name="Biggest fear about the next step"></textarea>
+
+      <label for="tried">What have you already tried that didn’t work?</label>
+      <textarea id="tried" name="What have you already tried that didn't work?"></textarea>
+
+      <fieldset class="checks" id="matters">
+        <legend>What matters most right now? Pick two.</legend>
+        <label class="check"><input type="checkbox" name="What matters most right now?" value="Pricing"> Pricing</label>
+        <label class="check"><input type="checkbox" name="What matters most right now?" value="Founding members"> Founding members</label>
+        <label class="check"><input type="checkbox" name="What matters most right now?" value="Finding a space"> Finding a space</label>
+        <label class="check"><input type="checkbox" name="What matters most right now?" value="Programming"> Programming</label>
+        <label class="check"><input type="checkbox" name="What matters most right now?" value="Retention"> Retention</label>
+        <label class="check"><input type="checkbox" name="What matters most right now?" value="Revenue beyond dues"> Revenue beyond dues</label>
+        <label class="check"><input type="checkbox" name="What matters most right now?" value="Partnerships or sponsors"> Partnerships or sponsors</label>
+        <label class="check"><input type="checkbox" name="What matters most right now?" value="Running it without you"> Running it without you</label>
+      </fieldset>
+
+      <label for="else">Anything else I should know?</label>
       <textarea id="else" name="Anything else"></textarea>
 
-      <button class="button" type="submit">Send it to me</button>
+      <button class="button" type="submit">Send it over</button>
     </form>
 
     <div class="thanks" role="status">
       <h1 tabindex="-1">Got it.</h1>
-      <p>Your intake is in my inbox. I will have read it before we talk.</p>
-      <p><strong>Booked the Blueprint Call and have not chosen a time yet?</strong><br><a href="https://calendly.com/draymondwashington/blueprint-call-draymond-washington">Choose your 90 minutes.</a></p>
-      <p>Founder Day, Launch Sprint, or Operating Partner: I will email you within 24 hours to set the schedule.</p>
-      <p><a href="/">Back to the site</a></p>
+      <p>I’ll read this before we talk.</p>
     </div>
   </div>
 </main>
